@@ -19,7 +19,7 @@ int funz(int * **A, int n, int m, double d1, double d2, short s){
 		counter =0; //azzero il contatore prima di una nuova colonna
 		for(int j = 0; j < m-1; j++){ //m-1 perché sennò controllerebbe l'elemento m-esimo, che è maggiore dell'indice max, m-1
 			
-			   if(*(A[j][i]!=nullptr && *(A[j+1][i]!=nullptr){ //controllo per eventuali puntatori nulli in A
+			   if(*(A[j][i])!=nullptr && *(A[j+1][i])!=nullptr){ //controllo per eventuali puntatori nulli in A
 			        primoel = (double) *(A[j][i]); //Scrivendo A[j][i] "giro la matrice per colonne" 
 			        secondoel = (double) *(A[j+1][i]); //typecasting per confronto con i double e per fare il rapporto 
 				
