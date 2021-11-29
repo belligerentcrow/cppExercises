@@ -1,0 +1,35 @@
+13 Ott 2021
+
+Descrivere un algoritmo in notazione NLS che prende in input
+una matrice o array bidimensionale V di dimensioni N × M
+ed un numero p.
+L’algoritmo dovrà calcolare e stampare le medie aritmetiche
+dei soli elementi minori o uguali a p per ogni colonna di
+V avente indice dispari.
+
+//////////////////
+
+
+Inizio
+V[N][M]
+i <-- 0;
+
+  while(i<N){
+    j <-- 1;		//per prendere le colonne dispari
+    k <-- 0;
+    media <-- 0;
+
+      while(j<M){
+
+        if( V[i][j]<= p){		//possibile fare anche aggiungendo AND j%2!=0 alla condizione, con j = 0 e incrementando solo di 1
+          media <-- media + V[i][j];
+          k<-- k + 1;
+        }
+
+      media <-- media/k;
+      stampa media;
+      j<-- j + 2;}	// per prendere le colonne dispari
+
+  i<-- i + 1;}
+
+Fine
