@@ -1,0 +1,26 @@
+in pseudocodice
+Descrivere un algoritmo in notazione NLS che prende in input un array A
+di N elementi e due numeri a e b. Si assuma a<b. 
+L'algoritmo dovrà stampare il numero di elementi dell'array (sia A[i] il generico 
+elemento di A) tali che a <= A[i] <= b. 
+
+//////////////
+
+
+Inizio
+A[N];
+Leggi a, b;
+i<--0;
+k<--0;
+
+while (i<N){
+
+  if(a<=A[i] AND A[i]<=b){
+  k <-- k+1;
+  }
+
+  i<--i+1;
+}
+Stampa k;
+
+Fine;
