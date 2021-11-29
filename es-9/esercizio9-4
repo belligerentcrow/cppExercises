@@ -1,0 +1,60 @@
+Descrivere un algoritmo in notazione NLS che prende in input
+una matrice o array bidimensionale V di dimensioni N × M,
+un array A di dimensione k, ed un numero w < M.
+L’algoritmo stampa il valore di verità true se esiste almeno
+una riga della matrice V che contiene almeno w elementi
+maggiori di ogni elemento in A.
+
+/////////////////////
+
+  Input:
+ V[N][M]
+ A[k]
+ w (<M)
+  Output:
+ stampa true se esiste una riga in V
+ che contiene almeno w elementi maggiori
+ di ogni elemento di A
+
+ Inizio
+ Leggi V[N][M];
+ Leggi A[k];
+ Leggi w;
+ i <-- 0;
+ max <-- A[0]
+ n<--1
+
+//calcolo il maggiore di A (basta che gli elementi della riga di V siano maggiori del più grande di A)
+ while(n < k) do
+
+  if(A[n]>max) then
+    max <-- A[n]
+  end if
+
+ n <-- n+1;
+ end while
+
+ while(i<N) do
+  j <--0;
+  counter <--0;
+
+    while(j<M) do
+
+      //conto quanti sono nella riga (azzero counter prima di entrare)
+      if(V[i][j]>max)
+        counter<--counter+1;
+      end if
+
+    j <--j+1;
+    end while
+
+    //se la condizione è verificata stampo true ed esco
+    if(counter>=w) then
+      stampa true;
+      i <--N+1;
+    end if;
+
+  i <--i+1;
+ end while
+
+ Fine
