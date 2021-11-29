@@ -1,0 +1,22 @@
+
+in pseudo-codice, 9 ott 2021
+Descrivere un algoritmo in notazione NLS che prenda in input
+    una matrice o array bidimensionale V di dimensione NxN 
+L'algoritmo costruisce un nuovo array W di dimensione N che 
+    contiene gli elementi della diagonale principale di V.
+
+Input: V[N][N]
+Output: W[N] che contiene la diag. di V
+
+/////////////////
+
+Inizio
+Leggi V[N][N];
+W[N];
+i <-- 0;
+while(i<N) do
+  W[i] <-- V[i][i];
+  i<--i+1;
+end while
+stampa W[N]; 
+Fine
