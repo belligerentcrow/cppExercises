@@ -8,6 +8,20 @@ bool funz(int ** Q, double w, int n){
   int sommacol = 0; 
   int sommadiag = 0; 
   
+  for(int i =0; i <n; i++){
+   sommadiag = sommadiag + Q[i][n-1-ui];
+  }
   
-  //
+  for(int i =0; i<n; i++){
+    sommacol = 0; 
+    for(int j =0; j<n; j++){
+      sommacol = Q[j][i] + sommacol; 
+    }
+    if( ((double)sommacol)/((double)sommadiag) > w){
+      return true; 
+    }
+  }
+  return false; 
+}
+  
   
