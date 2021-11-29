@@ -1,0 +1,51 @@
+circa 8 Ott 2021
+
+Descrivere un algoritmo in notazione NLS che prende in in-
+put una matrice V di dimensioni N × M ed uno array W di
+dimensione L.
+L’algoritmo dovrà calcolare e stampare, per ogni riga di V , il
+numero di elementi dello array W che sono compresi tra
+il minimo e il massimo valore (estremi inclusi) della riga
+stessa.
+
+///////////////
+
+
+Inizio
+Leggi V[N][M];
+Leggi W[L];
+i <-- 0;
+
+  while (i<N) do
+    j <-- 0;
+      while(j<M) do
+      min <--V[i][0];
+      max <--V[i][0];
+
+        if(V[i][j]>max) then
+          max <-- V[i][j];
+        end if
+
+        if(V[i][j]<min) then
+          min <-- V[i][j];
+        end if
+
+        j <-- j+1;
+      endwhile
+
+      z <--0;
+      tot <-- 0;
+      while(z<L) do
+
+        if( W[z]<=max AND W[z]>=min ) then
+          tot <-- tot+1
+        end if
+
+       z <--z+1;
+      end while
+
+      stampo tot;
+
+      i <-- i+1;
+  end while
+Fine
