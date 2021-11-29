@@ -1,0 +1,28 @@
+in pseudocodice - 8 ott 2021
+stampa i primi N numeri pari (> 0)
+stampa i successivi M numeri dispari.
+
+input = N > 0, M > 0.
+
+
+N < M
+
+Inizio
+Leggo N, M
+i <-- 0
+
+    while(i<N) do
+        Stampa i;
+        i <-- i+2;
+    end while
+
+j<--0
+    while(j<M) do
+        if(i%2!=0)
+          Stampa i;
+        end if
+      i<--i+1;
+      j <-- j+1;
+    end while
+
+Fine
